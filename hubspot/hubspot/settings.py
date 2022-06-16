@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',
     'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -52,11 +53,13 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'hubspot.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            "{path}{delimiter}".format(path=str(Path(__file__).parent.joinpath('templates')).replace('\\', '/'),
+                                       delimiter="/")
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
