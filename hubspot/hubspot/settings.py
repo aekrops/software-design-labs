@@ -56,10 +56,7 @@ ROOT_URLCONF = 'hubspot.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            "{path}{delimiter}".format(path=str(Path(__file__).parent.joinpath('templates')).replace('\\', '/'),
-                                       delimiter="/")
-        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
