@@ -8,7 +8,7 @@ router.register('users', UserViewSet)
 router.register('clients', ClientViewSet)
 router.register('conversations', ConversationViewSet)
 router.register('messages', MessageViewSet)
-# router.register('csv', UploadDataViaCSV, basename="upload_clients")
+router.register('csv', UploadDataViaCSV, basename="upload_clients")
 
 urlpatterns = [
     path('', include(router.urls)),
